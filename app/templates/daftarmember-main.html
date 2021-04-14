@@ -1,0 +1,51 @@
+{% extends 'template.html' %} {% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4>{{subjudul}}</h4>
+    </div>
+    <div class="card-body">
+        <div class="buttons">
+            <a href="/daftarmember/tambahmember" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> {{buttontambah}}</a>
+        </div>
+        <br />
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Tipe Member</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Tempat Lahir</th>
+                    <th scope="col">Tanggal Lahir</th>
+                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Pekerjaan</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for no, members in listMember %}
+
+                <tr>
+                    <th scope="row">{{no+1}}</th>
+                    <td>{{members.tipe}}</td>
+                    <td>{{members.nama}}</td>
+                    <td>{{members.tempatlahir}}</td>
+                    <td>{{members.tanggallahir}}</td>
+                    <td>{{members.jeniskelamin}}</td>
+                    <td>{{members.email}}</td>
+                    <td>{{members.alamat}}</td>
+                    <td>{{members.pekerjaan}}</td>
+                    <td>
+                        <a href="/daftarbuku/ubahmember/{{ members.id }}" class="btn btn-icon icon-left btn-warning"><i class="fas fa-file"></i> Ubah</a>
+                        <a href="/daftarbuku/hapusmember/{{ members.id }}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-times"></i> Hapus</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div> {% endblock %}

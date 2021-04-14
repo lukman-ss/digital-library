@@ -1,0 +1,97 @@
+{% extends 'template.html' %} {% block content%}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <form class="needs-validation" novalidate="" method="POST">
+                <div class="card-header">
+                    <h4>{{subjudul}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="control-label">Tipe Member</div>
+                        <div class="custom-switches-stacked mt-2">
+                            <label class="custom-switch">
+                            <input type="radio" name="tipe" value="Regular" class="custom-switch-input" checked>
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">Regular</span>
+                          </label>
+                            <label class="custom-switch">
+                            <input type="radio" name="tipe" value="Gold" class="custom-switch-input">
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">Gold</span>
+                          </label>
+                            <label class="custom-switch">
+                            <input type="radio" name="tipe" value="Premium" class="custom-switch-input">
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">Premium</span>
+                          </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" class="form-control" required="" id="nama" name="nama">
+                        <div class="invalid-feedback">
+                            Harap isi nama dengan benar
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tempat Lahir</label>
+                        <input type="text" class="form-control" required="" id="tempatlahir" name="tempatlahir">
+                        <div class="invalid-feedback">
+                            Harap isi tempat lahir dengan benar
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control datemask" placeholder="YYYY/MM/DD" name="tanggallahir" id="tanggallahir">
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="selectgroup w-100">
+                            <label class="selectgroup-item">
+                                <input type="radio" id="jeniskelaminpria" name="jeniskelamin" value="Pria" class="selectgroup-input">
+                                <span class="selectgroup-button">Pria</span>
+                              </label>
+                            <label class="selectgroup-item">
+                                <input type="radio" id="jeniskelaminwanita" name="jeniskelamin"  value="Wanita" class="selectgroup-input">
+                                <span class="selectgroup-button">Wanita</span>
+                              </label>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" required="" id="email" name="email">
+                        <div class="invalid-feedback">
+                            Format email salah
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Alamat</label>
+                        <input type="text" class="form-control" required="" id="alamat" name="alamat">
+                        <div class="invalid-feedback">
+                            Harap isi alamat dengan benar
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pekerjaan</label>
+                        <input type="text" class="form-control" required="" id="pekerjaan" name="pekerjaan">
+                        <div class="invalid-feedback">
+                            Harap isi pekerjaan dengan benar
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur saepe molestias vel harum ipsam voluptate temporibus architecto, exercitationem placeat. Delectus consequuntur debitis nesciunt porro excepturi? Doloribus temporibus facilis assumenda
+        non molestias eum itaque, excepturi provident fugit nihil, aut nostrum rerum debitis dolores maxime quasi blanditiis repudiandae illo tempore explicabo magni saepe suscipit. Omnis nisi quos iure officia quisquam officiis ipsum, eveniet aspernatur.
+        Laborum vero blanditiis quidem pariatur quas ab fugit qui perferendis in! Eius est veniam cum veritatis, magni inventore quaerat nulla ea? Eveniet, aliquid. Quod totam distinctio temporibus non? Autem saepe porro debitis reiciendis fugiat labore
+        sunt, quidem voluptas.
+    </div>
+</div>
+
+</div> {% endblock %}

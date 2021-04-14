@@ -1,0 +1,76 @@
+{% extends 'template.html' %} {% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4>{{subjudul}}</h4>
+    </div>
+    <div class="card-body">
+        <div class="buttons">
+            <a href="/daftarpinjam/tambahpinjam" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> {{buttontambah}}</a>
+        </div>
+        <br />
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">ID Buku</th>
+                    <th scope="col">ID Member</th>
+                    <th scope="col">Tanggal Pinjam</th>
+                    <th scope="col">Tanggal Kembali</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for no, pinjam in listPinjam %}
+                <tr>
+                    <th scope="row">{{no+1}}</th>
+                    <td>{{pinjam.idbuku}}</td>
+                    <td>{{pinjam.idmember}}</td>
+                    <td>{{pinjam.tanggalpinjam}}</td>
+                    <td>{{pinjam.tanggalkembali}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">ID Buku</th>
+                            <th scope="col">Judul Buku</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for no, Buku in listBuku %}
+                        <tr>
+                            <td>{{no+1}}</td>
+                            <td>{{Buku.id}}</td>
+                            <td>{{Buku.judulbuku}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">ID Member</th>
+                            <th scope="col">Nama Member</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for no, Member in listMember %}
+                        <tr>
+                            <td>{{no+1}}</td>
+                            <td>{{ Member.id}}</td>
+                            <td>{{ Member.nama}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}

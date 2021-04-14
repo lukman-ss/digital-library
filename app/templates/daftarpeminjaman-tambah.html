@@ -1,0 +1,49 @@
+{% extends 'template.html' %} {% block content%}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <form class="needs-validation" novalidate="" method="POST">
+                <div class="card-header">
+                    <h4>{{subjudul}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Judul Buku</label>
+                        <select class="form-control" name="idbuku" id="idbuku">
+                            {% for buku in listBukus %}
+                      <option  value="{{buku.id}}" >{{buku.judulbuku}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Member</label>
+                        <select class="form-control" name="idmember" id="idmember">
+                            {% for member in listMembers %}
+                      <option  value="{{ member.id }}" >{{member.nama}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Pinjam</label>
+                        <input type="date" class="form-control datemask" placeholder="YYYY/MM/DD" name="tanggalpinjam" id="tanggalpinjam">
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control datemask" placeholder="YYYY/MM/DD" name="tanggalkembali" id="tanggalkembali">
+                    </div>
+
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatum quod et consequuntur dolores fugit omnis maiores corporis dignissimos vitae illo ipsa iste excepturi nam cumque optio consectetur aliquid vero voluptas, natus molestias officia
+            sint unde. Voluptatibus voluptas ad repellat vel illum quam ipsum amet enim inventore laboriosam? Facilis culpa similique distinctio ratione consectetur dolore totam molestiae quasi, esse sequi. Cum sunt asperiores numquam aliquid. Iure ipsam
+            iusto dolorem iste, necessitatibus quo cupiditate est explicabo animi quidem id beatae eaque sapiente exercitationem tenetur harum ad voluptates odio nihil, cum architecto qui sequi! Distinctio molestiae hic facere quo, quibusdam nobis quisquam.</p>
+    </div>
+</div>
+
+</div> {% endblock %}

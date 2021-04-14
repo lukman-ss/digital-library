@@ -1,0 +1,61 @@
+{% extends 'template.html' %} {% block content%}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <form class="needs-validation" novalidate="" method="POST">
+                <div class="card-header">
+                    <h4>{{subjudul}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <form action="" method="post">
+                            <label>Judul Buku</label>
+                            <input type="text" class="form-control" required="" id='judulbuku' name='judulbuku'>
+                            <div class="invalid-feedback">
+                                <p>Contoh Attack On Titan</p>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pengarang</label>
+                        <input type="text" class="form-control" required="" id="pengarang" name="pengarang">
+                        <div class="invalid-feedback">
+                            <p>Contoh Mashashi Kishimoto</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Penerbit</label>
+                        <input type="text" class="form-control" required="" id="penerbit" name="penerbit">
+                        <div class="invalid-feedback">
+                            <p>Contoh Alex Media Computindo</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tahun Terbit</label>
+                        <input type="text" class="form-control" required="" id="tahunterbit" name="tahunterbit">
+                        <div class="invalid-feedback">
+                            <p>Contoh 2021</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select class="form-control" name="kategori" id="kategori">
+                          <option  value="Fiksi" >Fiksi</option>
+                          <option value="Ilmiah">Ilmiah</option>
+                        </select>
+                    </div>
+
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatum quod et consequuntur dolores fugit omnis maiores corporis dignissimos vitae illo ipsa iste excepturi nam cumque optio consectetur aliquid vero voluptas, natus molestias officia
+            sint unde. Voluptatibus voluptas ad repellat vel illum quam ipsum amet enim inventore laboriosam? Facilis culpa similique distinctio ratione consectetur dolore totam molestiae quasi, esse sequi. Cum sunt asperiores numquam aliquid. Iure ipsam
+            iusto dolorem iste, necessitatibus quo cupiditate est explicabo animi quidem id beatae eaque sapiente exercitationem tenetur harum ad voluptates odio nihil, cum architecto qui sequi! Distinctio molestiae hic facere quo, quibusdam nobis quisquam.</p>
+    </div>
+</div>
+
+</div> {% endblock %}
