@@ -26,10 +26,20 @@
                         <img src="{{url_for( 'static', filename='img/stisla-fill.svg' )}} " alt="logo " width="80 " class="shadow-light rounded-circle mb-5 mt-2 ">
                         <h4 class="text-dark font-weight-normal "><span class="font-weight-bold ">Digital Library STMIK JAYAKARTA</span></h4>
                         <p class="text-muted ">Sebelum memulai pastikan harus memiliki akses untuk digital library ini</p>
+
+                        {% if msg %}
+                        <div class="alert alert-warning alert-dismissible show fade">
+                            <div class="alert-body">
+                                <button class="close" data-dismiss="alert">
+                                <span>&times;</span>
+                              </button> {{msg}}
+                            </div>
+                        </div> {% endif %}
+
                         <form method="POST" action=" " class="needs-validation " novalidate=" ">
                             <div class="form-group ">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" class="form-control " name="email" tabindex="1" required autofocus>
+                                <label for="username">Email</label>
+                                <input id="username" type="text" class="form-control " name="username" tabindex="1" required autofocus>
                                 <div class="invalid-feedback ">
                                     Please fill in your email
                                 </div>

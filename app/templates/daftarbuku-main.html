@@ -24,14 +24,16 @@
                 {% for no, books in listBuku %}
                 <tr>
                     <th scope="row">{{no+1}}</th>
-                    <td>{{books.judulbuku}}</td>
+                    <td>
+                        <a href="/#">{{books.judulbuku}}</a>
+                    </td>
                     <td>{{books.pengarang}}</td>
                     <td>{{books.penerbit}}</td>
                     <td>{{books.tahunterbit}}</td>
                     <td>{{books.kategori}}</td>
                     <td>
                         <a href="/daftarbuku/ubahbuku/{{ books.id }}" class="btn btn-icon icon-left btn-warning"><i class="fas fa-file"></i> Ubah</a>
-                        <a href="/daftarbuku/hapusbuku/{{ books.id }}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-times"></i> Hapus</a>
+                        <a onclick="pesan()" href="/daftarbuku/hapusbuku/{{ books.id }}" class="btn btn-icon icon-left btn-danger" id="hapusBukuAlert"><i class="fas fa-times"></i> Hapus</a>
                     </td>
                 </tr>
                 {% endfor %}

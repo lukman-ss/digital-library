@@ -1,0 +1,50 @@
+{% extends 'template.html' %} {% block content%}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <form class="needs-validation" novalidate="" method="POST" enctype="multipart/form-data">
+                <div class="card-header">
+                    <h4>{{subjudul}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" required="" id='username' name='username'>
+                        <div class="invalid-feedback">
+                            <p>Contoh admin123</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" required="" id="password" name="password">
+                        <div class="invalid-feedback">
+                            <p>Contoh password123</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" class="form-control" required="" id="nama" name="nama">
+                        <div class="invalid-feedback">
+                            <p>Contoh Lukman</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>File Foto</label>
+                        <input type="file" class="form-control" name="file">
+                        <div class="invalid-feedback">
+                            <p>File harus JPG</p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+        <img src="{{url_for('static', filename='img/miyu-01.jpg')}}" alt="" height="450 px" width="400 px">
+    </div>
+</div>
+
+</div> {% endblock %}

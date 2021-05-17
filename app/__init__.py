@@ -11,5 +11,5 @@ db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 jwt=JWTManager(app)
 app.secret_key = "super secret key"
-from app.model import buku,member,pinjam
+from app.model import buku,member,pinjam,admin
 from app import routes

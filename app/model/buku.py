@@ -8,6 +8,7 @@ class Buku(db.Model):
     penerbit = db.Column(db.String(100), nullable=False)
     tahunterbit = db.Column(db.String(100), nullable=False)
     kategori = db.Column(db.String(100), nullable=False)
+    pdf = db.Column(db.String(100))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow)
 
